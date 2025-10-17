@@ -1,23 +1,22 @@
-name: 'Hello World README Updater'
+name: "Hello World README Updater"
 author: Your Name
-description: 'A minimal GitHub Action that prints Hello World with timestamp to your README'
+description: "A minimal GitHub Action that prints Hello World with timestamp to your README"
 
 inputs:
   GH_TOKEN:
-    description: 'GitHub access token with repo scope'
+    description: "GitHub access token with repo scope"
     required: true
     default: ${{ github.token }}
-  
+
   SECTION_NAME:
-    description: 'Section name to update in README'
+    description: "Section name to update in README"
     required: false
     default: "hello"
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "docker://rishika2001/hello-action:latest"
 
 branding:
-  icon: 'message-circle'
-  color: 'green'
-
+  icon: "message-circle"
+  color: "green"
